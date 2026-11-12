@@ -1,0 +1,34 @@
+1. Si LogiTech decidiera ampliar el microservicio para incluir estimación de stock mediante Inteligencia Artificial 
+y no tuviera cerrados los requisitos funcionales iniciales,
+ ¿qué modelo de ciclo de vida recomendarías aplicar (Cascada, Iterativo, Incremental o RAD) y por qué?
+
+Elegiría el modelo incremental porque permite ir añadiendo nuevas funciones poco a poco, 
+adaptándose a las necesidades de la empresa sin tener que desarrollar todo desde el principio.
+
+
+
+2. Explica cómo funciona el mecanismo de autoconfiguración de Spring Boot al arrancar tu aplicación con la base de datos elegida. 
+¿Qué ocurre si decides cambiar de SGBD?
+
+Spring Boot configura automáticamente la conexión con la base 
+de datos utilizando los datos del archivo `application.properties`. 
+Si cambiamos de MySQL a PostgreSQL,habría que modificar la dependencia y los datos de conexión.
+
+
+
+3. ¿Qué ventajas aporta definir la capa de transferencia mediante record inmutables de Java 25 en lugar de exponer 
+directamente la entidad @Entity Producto en el controlador REST?
+
+Los `record` permiten crear objetos más sencillos y evitan que los datos se puedan modificar después de crearlos. 
+Además, ayudan a no mostrar directamente los datos de la entidad de la base de datos.
+
+
+
+4. ¿Qué métodos de los definidos en tu API son idempotentes y explica qué significa ese concepto en arquitectura REST?
+
+
+
+
+5.Justifica por qué el alta exitosa (POST) debe retornar el código 201 Created y
+ el borrado exitoso (DELETE) el código 204 No Content en lugar de un 200 OK genérico. 
+
